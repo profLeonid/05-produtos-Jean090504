@@ -2,7 +2,7 @@
 
 Um gerenciador de produtos leve, moderno e seguro, desenvolvido com **JavaScript** e estilizado com **Tailwind CSS**. O sistema permite adicionar e remover produtos, mantendo os dados salvos localmente no navegador.
 
-![Preview](.img/print.png)
+![Preview](./img/print.png)
 
 ## 🚀 Funcionalidades
 
