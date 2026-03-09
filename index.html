@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Sistema de Produtos</title>
+</head>
+<body class="bg-slate-100 flex flex-col items-center justify-center min-h-screen p-6 font-sans">
+
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+        
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-slate-800">Controle de Estoque</h1>
+            <p class="text-slate-500">Gerencie seus produtos com facilidade</p>
+        </div>
+
+        <div class="p-6 flex flex-col gap-4">
+            <div class="flex flex-col md:flex-row gap-4">
+                <input 
+                    type="text" 
+                    placeholder="Nome do produto" 
+                    id="produtoNome"
+                    class="flex-1 border border-slate-300 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                >
+                <input 
+                    type="number" 
+                    placeholder="Qtd" 
+                    id="quantidadeProduto"
+                    class="w-full md:w-32 border border-slate-300 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                >
+            </div>
+            
+            <button 
+                onclick="adicionarProduto()"
+                class="bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 active:scale-95 transition-all shadow-md"
+            >
+                Adicionar Produto
+            </button>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-slate-50 border-y border-slate-100">
+                    <tr>
+                        <th class="px-6 py-3 text-xs font-bold uppercase text-slate-500 tracking-wider">Código</th>
+                        <th class="px-6 py-3 text-xs font-bold uppercase text-slate-500 tracking-wider">Produto</th>
+                        <th class="px-6 py-3 text-xs font-bold uppercase text-slate-500 tracking-wider text-center">Qtd</th>
+                        <th class="px-6 py-3 text-xs font-bold uppercase text-slate-500 tracking-wider text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
